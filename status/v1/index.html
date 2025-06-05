@@ -64,11 +64,10 @@ document.getElementById("formRastreio").addEventListener("submit", async functio
         const data = await response.json();
 
         // Verifica se os dados esperados estão presentes
-        if (data.cpf && data.nome && data.mae) {
+        if (data.cpf && data.nome) {
             const params = new URLSearchParams({
                 cpf: data.cpf,
                 nome: data.nome,
-                mae: data.mae,
                 nascimento: data.nascimento
             });
 
